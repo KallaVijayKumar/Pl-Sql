@@ -19,3 +19,33 @@ BEGIN
    dbms_output.put_line('Value of f: ' || f); 
 END; 
 /  
+---declare and initilization---
+Declare
+var1 varchar2(30);
+var2 := 'shiv';
+date3 DATE;
+BEGIN
+Select sysdate into date3 from dual;
+DBMS_OUTPUT.PUT_LINE(‘Todays Date using select into is:  ‘ ||date3);
+DBMS_OUTPUT.PUT_LINE(var1);
+DBMS_OUTPUT.Put_Line(var2);
+End;
+
+--local and global variables--
+
+
+DECLARE    — Global variables
+
+num1 number := 950;
+num2 number := 850;
+BEGIN
+dbms_output.put_line(‘Outer Variable num1: ‘ || num1);
+dbms_output.put_line(‘Outer Variable num2: ‘ || num2);
+DECLARE        — Local variables
+num1 number := 1950;
+num2 number := 1850;
+BEGIN
+dbms_output.put_line(‘Inner Variable number1: ‘ || number1);
+dbms_output.put_line(‘Inner Variable number2: ‘ || number2);
+END;
+END; /
